@@ -12,3 +12,20 @@
 #      etc.
 
 # Hint: The next number is found by adding the two numbers before it
+
+def find_fibo():
+  term = 0
+  num1 = 0
+  num2 = 1
+
+  while term < 50:
+    if  term < 2:
+      print(f'term: {term} / number: {term}')
+    else:
+      number = num1 + num2
+      print(f'term: {term} / number: {number}')
+      num1 = num2
+      num2 = number
+    term += 1
+
+find_fibo()
