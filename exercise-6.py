@@ -19,3 +19,40 @@
 #
 # After setting the likely season, you can use another if...elif...else statement to "adjust" if
 # the day number falls within a certain range.
+
+def find_season():
+  month = input('Enter the month as a 3 letter abbreviation (Jan, Feb, Mar): ')
+  day = int(input('Enter the Date: '))
+  if day == 1:
+    decoration = 'st'
+  elif day == 2:
+    decoration = 'nd'
+  elif day == 3:
+    decoration = 'rd'
+  else:
+    decoration = 'th'
+
+  if month in ('Jan', 'Feb', 'Mar'):
+    season = 'Winter'
+  elif month in ('Apr', 'May', 'Jun'):
+    season = 'Spring'
+  elif month in ('Jul', 'Aug', 'Sep'):
+    season = 'Summer'
+  else:
+    season = 'Fall'
+
+  if month == 'Mar' and day > 21:
+    season = 'Spring'
+  elif month == 'Jun' and day > 21:
+    season = 'Summer'
+  elif month == 'Sep' and day > 21:
+    season = 'Fall'
+  elif month == 'Dec' and day > 21:
+    season = 'Winter'
+
+  if day > 31:
+    print(f'{day} is larger than the average day in a month')
+  else:
+    print(f'{month} {day}{decoration} is in {season}')
+
+find_season()
