@@ -10,3 +10,14 @@
 #      The dog's age in dog years is xx
 
 # Hint:  Use the int() function to convert the string returned from input() into an integer
+
+def dogAgeDeterminer():
+  inputYears = int(input('Enter a dog\'s age in human years to determine its age in dog years: '))
+  if inputYears <= 2:
+    dogAge = inputYears*10
+    print(f'The dog\'s age in dog years is {dogAge}')
+  else:
+    dogAge = 20 + (inputYears - 2)*7
+    print(f'The dog\'s age in dog years is {dogAge}')
+
+dogAgeDeterminer()
