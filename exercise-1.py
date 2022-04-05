@@ -11,7 +11,7 @@
 # Hints:  Use the in operator to check if a character is in another string
 #         For example, if some_char in 'abc':
 
-def vowelChecker():
+def vowel_checker():
   inputLetter = input('Enter a single letter: ')
   lowerInputLetter = inputLetter.lower()
   if lowerInputLetter == 'a' or lowerInputLetter == 'e' or lowerInputLetter == 'i' or lowerInputLetter == 'o' or lowerInputLetter == 'u':
@@ -19,4 +19,4 @@ def vowelChecker():
   else: 
     print(f'The letter {inputLetter} is a consonant')
 
-vowelChecker()
+vowel_checker()

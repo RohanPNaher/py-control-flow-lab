@@ -10,11 +10,11 @@
 from subprocess import check_output
 
 
-def characterCounter():
+def character_counter():
   inputPhrase = input('Enter a word or phrase (if you want to quit, write quit): ')
   if inputPhrase != 'quit':
     print(f'What you entered is {len(inputPhrase)} characters long')
-    characterCounter()
+    character_counter()
   else:
     '' 
-characterCounter()
+character_counter()
